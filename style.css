@@ -1,0 +1,336 @@
+/*
+ * Base structure
+ */
+body {
+    position: relative;
+    min-height: 100%;
+}
+a, button, input, textarea {
+    outline: 0;
+}
+ul, ol {
+    padding-left: 25px;
+}
+/*page*/
+.page-container {
+    position: relative;
+}
+.label {
+    display: inline-block;
+    font-weight: 500;
+    padding: 2px 5px 1px 5px;
+    line-height: 1.5384616;
+    border: 1px solid transparent;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 0.1px;
+    border-radius: 2px;
+}
+.bg-success {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+    color: #fff;
+}
+
+/******
+    Nav
+********/
+.navbar-inverse {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+    color: #6495ED;
+}
+
+.navbar {
+    margin-bottom: 0;
+    border-width: 1px 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+.navbar-header {
+    min-width: 660px;
+}
+.navbar-nav {
+    margin: 0;
+    text-align: left;
+}
+.navbar-header .navbar-nav {
+    float: left;
+    padding-left: 20px;
+    background-color: #fff;
+}
+
+.navbar-collapse {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.navbar-inverse .navbar-collapse {
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.navbar-text {
+    margin: 0;
+    padding: 13px 20px;
+}
+
+/******
+    Sidebar
+********/
+.sidebar {
+    background-color: #fff;
+    color: #263238;
+    position: relative;
+    width: 100%;
+    display: none;
+    min-width: 380px;
+    margin-right: 15px;
+    border: 5px;
+    border-color: black;
+}
+.sidebar-main {
+    z-index: 99;
+}
+.sidebar-content {
+    position: relative;
+    padding-bottom: 10px;
+    min-height: 1070px
+}
+.no-padding {
+    padding: 0!important;
+}
+.category-content {
+    position: relative;
+    padding: 20px;
+}
+.sidebar-user + .sidebar-category .navigation {
+    padding-top: 0;
+}
+.navigation {
+    margin: 0;
+    padding: 10px 0;
+    list-style: none;
+    position: relative;
+}
+.navigation .navigation-header, .navigation .navigation-header a {
+    color: #000000;
+    font-weight: 400;
+}
+.navigation .navigation-header {
+    min-height: 30px;
+    padding: 10px 20px;
+    border-bottom: 0;
+    text-transform: uppercase;
+    font-size: 11px;
+    line-height: 1.82;
+}
+.navigation li {
+    position: relative;
+}
+.navigation .navigation-header > span {
+    font-size: 36px;
+    display: block;
+    margin-top: 2px;
+}
+.navigation li + li {
+    margin-top: 1px;
+}
+
+
+/******
+    Event Content
+********/
+.content-wrapper {
+    width: 100%;
+}
+
+.content {
+    padding: 0 20px 60px 20px;
+}
+
+h1 {
+    font-size:100%;
+   font-family: "Roboto","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-weight: 300;
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+h2 {
+    font-size: 12px;
+    font-style: italic;
+    color: gray;
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+/*Bar*/
+#topBar{
+    width:380px;
+    height:980px;
+}
+.chartRow{
+    /*border: #778899;*/
+    background: white;
+
+    margin-top: 2px;
+}
+.bar{
+    fill: #B0E0E6;
+    /*opacity: 0.5;*/
+}
+
+/*tweetList CSS*/
+.userImg{
+
+    display: block;
+    float: left;
+}
+.twPanel{
+    display: block;
+    fill: white;
+    padding: 10px;
+    margin: 0 0 10px;
+    color: 333;
+}
+.tweetContent{
+  display: block;
+  padding-left: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.tweetTitle{
+  display: block;
+}
+.twPanel .tweetTitle .userName{
+    display: inline-block;
+    color: #060606;
+    float:left;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: "Roboto","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+
+.twPanel .tweetTitle .place{
+    display: inline-block;
+    color: #BABABA;
+    float: right;
+    font-size: 20px;
+    font-family: "Roboto","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+.tweetText{
+    margin-top: 10px;
+    color: #999;
+    font-size: 24px;
+    font-family: "Roboto","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+.tweetText em{
+    color: #B0E0E6;
+    font-weight: 600;
+}
+
+
+/*bar CSS*/
+text.label{
+    fill: #777777;
+    color: #777777;
+    font-size: 24px;
+    font-weight: bold;
+    border: 1px black;
+    font-family: "Roboto","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+text.category{
+    fill: #666666;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: "Roboto","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+/*Map*/
+#tileMap { 
+    width: 100%;
+    height: 1080px; 
+}
+
+/* css to customize Leaflet default styles  */
+.custom .leaflet-popup-content-wrapper {
+  background: #00BFFF;
+  color: #ffffff;
+  background opacity: 0.5;
+  font-size:14px;
+  line-height:20px;
+}
+.custom .leaflet-popup-content-wrapper a {
+  color:rgba(255,255,255,0.5);
+}
+
+
+
+@media(min-width: 769px){
+  .page-container {
+      padding-left: 20px;
+      width: 100%;
+      display: table;
+      table-layout: fixed;
+  }
+  .page-content {
+      display: table-row;
+  }
+  .sidebar {
+      display: table-cell;
+      vertical-align: top;
+      width: 260px;
+      margin-right: 15px;
+  }
+  .content-wrapper {
+      display: table-cell;
+      vertical-align: top;
+  }
+  .navbar {
+      padding-right: 20px;
+  }
+  .navbar-header {
+      margin-left: -20px;
+      background-color: #fff;
+  }
+  .navbar-nav {
+      margin-left: 20px;
+  }
+  .navbar-collapse {
+      text-align: left;
+      margin-left: -20px;
+  }
+  .navbar-text {
+      padding-right: 0;
+  }
+} 
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: #6495ED;
+  stroke-width: 5px;
+}
+.hashLine{
+  
+}
+.nyBar {
+  height: 102px;
+}
+.whole {
+  height: 1080px;
+}
+
+
+
+
+
