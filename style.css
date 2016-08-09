@@ -15,15 +15,13 @@ ul, ol {
 .page-container {
     position: relative;
 }
-.allside{
-  height: calc(100%px);
-
-}
 .leftside{
-  height: calc(100%px -20px);
+  height: calc(100vh - 20px);
+  overflow-y: auto;
 }
 .rightside{
-  height: calc(100%px -20px);
+  height: calc(100vh - 20px);
+  overflow-y: auto;
 }
 
 /******
@@ -40,7 +38,6 @@ ul, ol {
 /*Bar*/
 #topBar{
     min-width:300px;
-    min-height:1000px;
 }
 .chartRow{
     /*border: #778899;*/
@@ -62,13 +59,13 @@ text.label{
     font-size: 24px;
     font-weight: bold;
     border: 1px black;
-    font-family: "Roboto","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-family: "Roboto","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 text.category{
     fill: #666666;
     font-size: 24px;
     font-weight: bold;
-    font-family: "Roboto","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-family: "Roboto","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 /*tweetList CSS*/
@@ -100,7 +97,7 @@ text.category{
     float:left;
     font-size: 22px;
     font-weight: 600;
-    font-family: "Roboto","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-family: "Roboto","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 .twPanel .tweetTitle .place{
@@ -108,13 +105,13 @@ text.category{
     color: #BABABA;
     float: right;
     font-size: 14px;
-    font-family: "Roboto","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-family: "Roboto","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 .tweetText{
     /*margin-top: 10px;*/
     color: #999;
     font-size: 16px;
-    font-family: "Roboto","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-family: "Roboto","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 .tweetText em{
     color: #B0E0E6;
@@ -122,9 +119,9 @@ text.category{
 }
 
 /*Map*/
-#tileMap { 
+#tileMap {
     min-width: 1000px;
-    min-height: 1000px; 
+    height: calc(100vh - 20px);
 }
 
 /* css to customize Leaflet default styles  */
@@ -138,8 +135,6 @@ text.category{
 .custom .leaflet-popup-content-wrapper a {
   color:rgba(255,255,255,0.5);
 }
-
-
 
 @media(min-width: 769px){
   .page-container {
@@ -178,10 +173,4 @@ text.category{
   .navbar-text {
       padding-right: 0;
   }
-} 
-
-
-
-
-
-
+}
