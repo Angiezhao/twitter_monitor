@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Angiezhao/twitter-map.git"
+    "url": "git+https://github.com/Angiezhao/twitter-monitor.git"
   },
   "author": "Anqi Zhao",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Angiezhao/twitter-map/issues"
+    "url": "https://github.com/Angiezhao/twitter-monitor/issues"
   },
-  "homepage": "https://github.com/Angiezhao/twitter-map#readme",
+  "homepage": "https://github.com/Angiezhao/twitter-monitor#readme",
   "dependencies": {
     "chart.js": "^2.2.1",
     "elasticsearch": "^11.0.1",
