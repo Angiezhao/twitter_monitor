@@ -18,54 +18,24 @@
     </head>
 
     <body class="pace-done">
-        <!-- header of NYC monitor -->
-        <!-- <nav class="navbar navbar-inverse">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <a class="navbar-brand" href="#">NYC Twitter Monitor</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <p class="navbar-text"> Event: 
-                    <span id="event"></span>
-                </p>
-            </div>
-          </div>
-        </nav> -->
         <!-- page container -->
-        <div class="page-container" style="min-height:1080px">
+        <div class="page-container">
             <!-- Page Content -->
             <div class="page=content">
-
-                <!-- Main Sidebar -->
-                <div class="sidebar sidebar-main">
-                    <div class="sidebar-content">
-                        <!-- top hashtag -->
-                        <div class="sidebar-category sidebar-category-visible">
-                            <div class="category-content no-padding">
-                                <ul class="navigation navigation-main navigation-accordion">
-                                    <!-- <li>
-                                        <div id="hashLine"></div>
-                                    </li> -->
-                                    <li>
-                                        <div id="topBar"></div>
-                                    </li>
-                                </ul>
-                            </div>   
-                        </div>
-                    </div>
-                </div>
-                <!-- End Sidebar -->
-
                 <!-- Event Content -->
                 <div class="content-wrapper">
                     <div class="content">
-                        <div class="row">
+                        <div class="row allside" style="min-width:1200px">
+                            <!-- topbar -->
+                            <div class="col-md-3 leftside" style="min-width:300px">
+                                <div id="topBar"></div>
+                            </div>
                             <!-- Map -->
-                            <div class="col-md-8">
+                            <div class="col-md-6" style="min-width:600px">
                                 <div id="tileMap"></div>
                             </div>
-                        <!-- List of Tweets -->
-                            <div class="col-md-4">
+                            <!-- List of Tweets -->
+                            <div class="col-md-3 rightside" style="min-width:300px">
                                 <div class="panel panel-default">
                                     <div class="panel-body">
                                         <div id="tweetList"></div>
@@ -83,7 +53,7 @@
         <!-- End Page Container -->
 
         <script> 
-            var twitterMap = L.map('tileMap').setView([40.78, -73.914], 12); 
+            var twitterMap = L.map('tileMap').setView([40.78, -73.92], 12); 
             var allLayers = [];
             var baseLayer;
 

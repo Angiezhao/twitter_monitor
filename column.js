@@ -1,7 +1,7 @@
 function drawBar(targetID, data){
     var margin = {top: 10, right: 10, bottom: 10, left: 15},
-        width = 380 - margin.left - margin.right,
-        height = 45 - margin.top - margin.bottom;
+        width = $(".leftside").width() - margin.left - margin.right,
+        height = $(".leftside").height()/20 - margin.top - margin.bottom;
 
     // Parse the date / time
     //var parseDate = d3.timeFormat("%Y-%m").parse;
@@ -54,8 +54,8 @@ function drawBar(targetID, data){
       svg.selectAll(".frequency")
           .data(data)
         .enter().append("rect")
-          .attr("x", function(d, i) { return 14*i; })
-          .attr("width", 12)
+          .attr("x", function(d, i) { return width/25*i; })
+          .attr("width", width/25-1)
           .attr("y", function(d) { return y(d.doc_count); })
           .attr("height", function(d) { return height - y(d.doc_count); });
 

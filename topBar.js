@@ -2,10 +2,10 @@ var settings;
 var topNum = 10;
 function setup(targetID){
     //Set size of svg element and chart
-    var margin = {top: 0, right: 0, bottom: 0, left: 0},
-        width = 380 - margin.left - margin.right,
-        height = 1000 - margin.top - margin.bottom,
-        categoryIndent = 4*15 + 5,
+    var margin = {top: 0, right: 10, bottom: 0, left: 10},
+        width = $(".leftside").width() - margin.left - margin.right,
+        height = $(".leftside").height() - margin.top - margin.bottom,
+        categoryIndent = 0,
         defaultBarWidth = 2000;
 
     //Set up scales
@@ -71,8 +71,8 @@ function redrawChart(targetID, newdata) {
 
     var newRowTitle = newRow
       .append("svg")
-      .attr("height", 55)
-      .attr("width", 380)
+      .attr("height", height/20)
+      .attr("width", width)
       .append("g")
       .attr("class", "chartRow");
        // .attr("transform", function(d, i){ 
@@ -95,7 +95,7 @@ function redrawChart(targetID, newdata) {
             return height/(topNum+1)
           }
       })
-      .attr("width", function(d) { return 380;})
+      .attr("width", function(d) { return width;})
       .style("fill", function(d, i){
           if(i==uniqRound){ 
             return "#B0E0E6"
@@ -124,7 +124,7 @@ function redrawChart(targetID, newdata) {
       .attr("text-overflow","ellipsis")
       .attr("y", height/topNum/2)
       .attr("width", width)
-      .attr("x",width-65)
+      .attr("x",width-25)
       .attr("opacity",1)
       .attr("dy","-0.3em")
       .attr("dx", 0)
@@ -159,7 +159,7 @@ function redrawChart(targetID, newdata) {
     //EXIT
 
     //Fade out and remove exit elements
-    chartRow.exit()
+    newRow.exit()
       .transition(t)
       .style("opacity","0")
       .attr("transform", function(d, i){return "translate(0, " + parseInt(height/topNum*i) + ")"})
@@ -169,7 +169,7 @@ function redrawChart(targetID, newdata) {
 
     var delay = function(d, i) { return 200 + i * 30; };
 
-    chartRow.transition(t)
+    newRow.transition(t)
         .delay(delay)
         .duration(900)
         .attr("transform", function(d){ return "translate(0," + y(d.key) + ")"; });

@@ -1,10 +1,10 @@
 var setUps;
-var tweetNum = 5;
+var tweetNum = 7;
 function init(targetID){
     //Set size of svg element and chart
     var margin = {top: 0, right: 0, bottom: 0, left: 0},
-        width = 450 - margin.left - margin.right,
-        height = 1050 - margin.top - margin.bottom,
+        width = $(".rightside").width() - margin.left - margin.right,
+        height = $(".rightside").height() - margin.top - margin.bottom,
         categoryIndent = 0,
         defaultBarWidth = 2000;
 
@@ -63,15 +63,13 @@ function redrawTweet(targetID, newdata) {
       //.attr("transform", function(d, i){return "translate(0, " + parseInt(height/tweetNum*i) + ")"});
     var newUserImg = newRow
       .append("div")
-      .attr("class", "userImg")
-      .attr("width", 420);
+      .attr("class", "userImg");
       // .append("g")
       // .attr("class", "tweetRow");
 
     var newTweet = newRow
       .append("div")
       .attr("class", "tweetContent")
-      .attr("width", 420);
 
     var newTweetTitle = newTweet
       .append("div")
@@ -82,8 +80,7 @@ function redrawTweet(targetID, newdata) {
 
     newUserImg.append('img')
       .attr("src", function(d){ return d["user"]["profile_image_url_https"]})
-      .attr("opacity",1)
-      .attr("dy","5px");
+      .attr("opacity",1);
 
     //Add value places + user.name
     newTweetTitle.append("span")
@@ -95,7 +92,6 @@ function redrawTweet(targetID, newdata) {
     newTweetTitle.append("span")
       .attr("class","place")
       .attr("opacity",1)
-      .attr("height", 200)
       .attr("anchor", "middle")
       .text(function(d){return d["place"]["name"] });  
     
@@ -129,7 +125,7 @@ function redrawTweet(targetID, newdata) {
     //EXIT
 
     //Fade out and remove exit elements
-    chartRow.exit()
+    newTweet.exit()
       .transition(t)
       .style("opacity","0")
       .attr("transform", function(d, i){return "translate(0, " + parseInt(height/tweetNum*i) + ")"})
@@ -139,7 +135,7 @@ function redrawTweet(targetID, newdata) {
 
     var delay = function(d, i) { return 200 + i * 30; };
 
-    chartRow.transition(t)
+    newTweet.transition(t)
         .delay(delay)
         .duration(900)
         .attr("transform", function(d){ return "translate(0," + y(d.key) + ")"; });

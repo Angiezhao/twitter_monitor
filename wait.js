@@ -2,10 +2,10 @@ var q1Times =0;
 var q2Times =0;
 var hashTimes=0;
 
-var dataUrl = "http://localhost:5000/nytweets";
-var dataUrl2 = "http://localhost:5000/nytweets2";
-var dataUrl3 = "http://localhost:5000/nytweets3/";
-var dataUrl4 = "http://localhost:5000/nytweets4/";
+var dataUrl = "https://shielded-tundra-83707.herokuapp.com/nytweets";
+var dataUrl2 = "https://shielded-tundra-83707.herokuapp.com/nytweets2";
+var dataUrl3 = "https://shielded-tundra-83707.herokuapp.com/nytweets3/";
+var dataUrl4 = "https://shielded-tundra-83707.herokuapp.com/nytweets4/";
 
 function getTweets(){
     tNewHash = [];
